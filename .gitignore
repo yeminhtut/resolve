@@ -1,0 +1,6 @@
+# Grunt generated folder
+build/
+vendor/
+bin/
+node_modules/
+bower_components/

@@ -1,0 +1,91 @@
+<html ng-app="resolveApp">
+ <head>
+     <title>Resolve</title>
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ </head>
+ <body>
+<div id="video-wrapper">
+    <div class="container clearfix">        
+        <div class="row" id="video-main" ng-controller="mainCtrl as main">
+            <div class="col-xs-8" style="padding-left:0px;">
+            	<h3>{{title}}</h3>
+            	<h4 id="video-container-header" style="color:#FFF;">Featured Videos</h4>
+            </div>
+            <div class="col-xs-4" style="color: #FFF;margin-top: 40px;text-align: right;font-size: 18px;"><a href="https://www.youtube.com/tripzillatravel" target="_blank">See All</a></div>
+            <div class="col col-md-8" id="main-theatre">
+                <iframe id="youtube-lg" width="100%" height="375" src="https://www.youtube.com/embed/j6ADKjBk7Rs" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <div class="col col-md-4" id="flexcroll" >
+                                   <div class="row side-navigation" data-id="j6ADKjBk7Rs">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-j6ADKjBk7Rs" src="https://i.ytimg.com/vi/j6ADKjBk7Rs/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>Things Japan Does Better Than Your Country</h3>
+                        </div>                    
+                    </div>
+                                   <div class="row side-navigation" data-id="cIt3NrcZVL4">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-cIt3NrcZVL4" src="https://i.ytimg.com/vi/cIt3NrcZVL4/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>POV Footages That’ll Get Your Adrenaline Pumping</h3>
+                        </div>                    
+                    </div>
+                                   <div class="row side-navigation" data-id="eVFwE2toi-I">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-eVFwE2toi-I" src="https://i.ytimg.com/vi/eVFwE2toi-I/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>#MannequinChallenge feat. TripZilla</h3>
+                        </div>                    
+                    </div>
+                                   <div class="row side-navigation" data-id="HblMpbKAl0I">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-HblMpbKAl0I" src="https://i.ytimg.com/vi/HblMpbKAl0I/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>ZUJI: A CRAZY FLIGHT SALE YOU DON'T WANNA MISS</h3>
+                        </div>                    
+                    </div>
+                                   <div class="row side-navigation" data-id="Dxnqbf3zQsM">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-Dxnqbf3zQsM" src="https://i.ytimg.com/vi/Dxnqbf3zQsM/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>Got the Balls to Try These 8 Gross Asian Food?</h3>
+                        </div>                    
+                    </div>
+                                  <div class="row side-navigation" data-id="Dxnqbf3zQsM">
+                        <div class="col col-xs-4">
+                            <img class="yt-thumbnail" id="thumb-Dxnqbf3zQsM" src="https://i.ytimg.com/vi/Dxnqbf3zQsM/hqdefault.jpg" width="100%;">
+                        </div>
+                        <div class="col col-xs-8">
+                            <h3>Got the Balls to Try These 8 Gross Asian Food?</h3>
+                        </div>                    
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>     
+<style type="text/css">
+body{background:#2b2d32;color:#FFF;}#main-theatre{margin-bottom:20px}.side-navigation{padding:4px;margin-right:-5px}.side-navigation:hover{cursor:pointer}.side-navigation h3{color:#FFF;margin:0;font-size:16px}#flexcroll{max-height:375px;overflow-y:scroll}#flexcroll::-webkit-scrollbar{width:14px}#flexcroll::-webkit-scrollbar-track{background:rgba(90,88,88,.5)}#flexcroll::-webkit-scrollbar-thumb{-webkit-border-radius:0;background:#989898}
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route-min.js"></script>
+<script type="text/javascript" src="/client/app.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.side-navigation').click(function(){
+            var vid = $(this).attr("data-id");
+            var loc = 'https://www.youtube.com/embed/'+vid;
+            var thumb_id = 'thumb-'+vid;
+            $('#youtube-lg').attr('src', loc);
+            $('.yt-thumbnail').css({'border':'none'});
+            $('#'+thumb_id).css({'border':'2px solid #de6868'});
+        });
+    });
+</script>
+ </body>
+ </html>
