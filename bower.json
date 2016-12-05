@@ -75,7 +75,9 @@
     "lodash": "^4.16.5",
     "ng-lodash": "^0.5.0",
     "oauthio-web": "^0.6.1",
-    "angular-socket-io": "~0.6.0"
+    "angular-socket-io": "~0.6.0",
+    "bootstrap": "^3.3.7",
+    "angular-local-storage": "^0.5.2"
   },
   "resolutions": {
     "angular": "1.5.8",
