@@ -1,7 +1,8 @@
 angular.module('resolveApp', [
 		'ui.router',
 		'angular-medium-editor',
-		'ngMaterial'
+		'ngMaterial',
+		'LocalStorageModule'
 	])
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -9,4 +10,5 @@ angular.module('resolveApp', [
 
     $locationProvider.html5Mode(true);
   })
+
 	

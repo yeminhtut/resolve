@@ -1,13 +1,4 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>{{vm.title}}</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div>
-                <form name="articleForm" class="ng-pristine ng-valid ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid ng-valid-required ng-valid-pattern">
+<form name="articleForm" class="ng-pristine ng-valid ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid ng-valid-required ng-valid-pattern">
                     <md-input-container class="md-block flex-gt-sm" flex-gt-sm="">
                         <h1 id="title-input" ng-model="vm.article.title" medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: false,'placeholder':{text:'Title'}}" ng-change="vm.saveArticle()"></h1>
                         <div class="md-errors-spacer" ></div>
@@ -20,8 +11,4 @@
                         <md-button class="md-raised" ng-click="vm.save(vm.article)">Save as Draft</md-button>
                         <md-button class="md-raised md-primary" ng-click="vm.publish(vm.article)">Save and Publish</md-button>
                     </md-input-container>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+                </form> 

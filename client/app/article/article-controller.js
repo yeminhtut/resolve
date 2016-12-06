@@ -3,13 +3,13 @@
 
 	angular
 		.module('resolveApp')
-		.controller('MainCtrl', main)
+		.controller('ArticleCtrl', article)
 
-	main.$inject= ['$scope', '$http','localStorageService']
-	function main($scope, $http,localStorageService){
+	article.$inject= ['$scope', '$http','localStorageService']
+	function article($scope, $http,localStorageService){
 		var vm= this;
 		vm.articles = [];
-		vm.title = "Main Template"
+		vm.title = "Article Template"
 		vm.saveArticle = saveArticle;
 		// init()
 

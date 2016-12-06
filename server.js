@@ -9,6 +9,7 @@ app.use('/src', express.static(__dirname + '/build/src'));
 app.use('/vendor', express.static(__dirname + '/build/vendor'));
 app.use('/client', express.static(__dirname + '/client'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
+app.use('/directives', express.static(__dirname + '/client/app/directives'));
 //app.use('/app', express.static(__dirname + '/client/app'));
 
 // app.use('/css', express.static(__dirname + '/css'));
