@@ -1,11 +1,121 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+	<div class="navbar-header">
+	 
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+	<span class="sr-only">Toggle Navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	 
+	<a class="navbar-brand" href="http://bo.tripzilla.com">
+	TripZilla Back Office
+	</a>
+	</div>
+	<div class="collapse navbar-collapse" id="app-navbar-collapse">
+	 
+	<ul class="nav navbar-nav navbar-right">
+	 
+	<li class="dropdown">
+	<a href="http://bo.tripzilla.com/dashboard" aria-expanded="false">Dashboard</a>
+	</li>
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	Staycations <span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+	<li><a href="http://bo.tripzilla.com/staycations/companies">Companies</a></li>
+	<li><a href="http://bo.tripzilla.com/staycations/promotions">Promotions</a></li>
+	<li><a href="http://bo.tripzilla.com/staycations/banners/homepage-carousel">Home Page Carousel</a></li>
+	<li><a href="http://bo.tripzilla.com/staycations/cache">Site Cache</a></li>
+	</ul>
+	</li>
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	Magazine Featured <span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+	<li><a href="http://bo.tripzilla.com/featured/default">Default</a></li>
+	<li><a href="http://bo.tripzilla.com/featured/my">Malaysia</a></li>
+	<li><a href="http://bo.tripzilla.com/featured/ph">Philippines</a></li>
+	</ul>
+	</li>
+	<li class="dropdown">
+	<a href="http://bo.tripzilla.com/banners" aria-expanded="false">Banners</a>
+	</li>
+	<li class="dropdown">
+	<a href="http://bo.tripzilla.com/contests" aria-expanded="false">Contests</a>
+	</li>
+	<li class="dropdown">
+	<a href="http://bo.tripzilla.com/users" aria-expanded="false">Users</a>
+	</li>
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	Reports <span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+	<li><a href="http://bo.tripzilla.com/reports/ga">Google Monthly Analytics</a></li>
+	<li><a href="http://bo.tripzilla.com/reports/fb">Facebook Monthly Analytics</a></li>
+	<li><a href="http://bo.tripzilla.com/reports/fb/daily">Facebook Daily Analytics</a></li>
+	<li role="separator" class="divider"></li>
+	<li><a href="http://bo.tripzilla.com/reports/enquiries">TZSG Enquiries</a></li>
+	<li><a href="http://bo.tripzilla.com/reports/edm/listings/tripzilla">TZSG Weekly EDM</a></li>
+	<li><a href="http://bo.tripzilla.com/reports/edm/listings/magazine">Mag Weekly EDM</a></li>
+	</ul>
+	</li>
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	Ye Min <span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+	<li><a href="http://bo.tripzilla.com/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+	</ul>
+	</li>
+	</ul>
+	</div>
+	</div>
+</nav>
 <div class="container">
-    <div class="row">
+	<!-- <div class="row">
         <div class="col-md-12">
-            <ul>
-                <li ng-repeat="article in vm.articles">
-                    {{article.title}}
-                </li>
-            </ul>
+                <div ng-repeat="article in vm.articles">
+                    <a href="">{{article.title}}</a>
+                </div>
         </div>
+    </div> -->
+    <div class="row">
+    	<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="pull-right">
+					<a href="http://bo.tripzilla.com/featured/edit/default/slide">Edit</a>
+				</div>
+				<div class="panel-title">Featured Slider</div>
+			</div>
+			<div class="panel-body bt">
+				<div class="col-md-3 m-b-lg">
+					<img src="https://www.tripzilla.com/wp-content/uploads/2016/10/stock-photo-70775333-294x240.jpg" class="img-responsive" style="max-height:360px;width:100%;">
+					<h4><a href="https://www.tripzilla.com/korea-enchanting-locations/48124" target="_blank">12 Enchanting Locations in Korea Fit for a Fairy Tale</a></h4>
+				</div>
+				<div class="col-md-3 m-b-lg">
+					<img src="https://www.tripzilla.com/wp-content/uploads/2016/10/3-3-294x240.jpg" class="img-responsive" style="max-height:360px;width:100%;">
+					<h4><a href="https://www.tripzilla.com/myanmar-travel-guide-one-week/47786" target="_blank">One-Week in Myanmar: Travel Guide with Tips &amp; Costs</a></h4>
+				</div>
+				<div class="col-md-3 m-b-lg">
+					<img src="https://www.tripzilla.com/wp-content/uploads/2016/11/Capture-294x240.png" class="img-responsive" style="max-height:360px;width:100%;">
+					<h4><a href="https://www.tripzilla.com/zuji-taipei-free-things-to-do/49164" target="_blank">Travel Cheat Sheet: 10 FREE Things to Do in Taipei for Budget Travellers</a></h4>
+				</div>
+				<div class="col-md-3 m-b-lg">
+					<img src="https://www.tripzilla.com/wp-content/uploads/2016/10/4956913016_07749f8ac5_z-294x240.jpg" class="img-responsive" style="max-height:360px;width:100%;">
+					<h4><a href="https://www.tripzilla.com/kaohsiung-next-taiwan-destination/47578" target="_blank">Why Kaohsiung Should Be Your Next Taiwan Destination</a></h4>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="row">
+    	<h3>{{vm.title}}</h3>
+    	<input type="text" class="form-control" placeholder="Text input" ng-model="vm.assignment.title" ng-change="vm.saveAssignment()">
+    	<textarea class="form-control" rows="3" ng-model="assignment.content" ng-change="storage.assignment.content = assignment.content"></textarea>
+    	<p>{{assignment.content}}</p>
     </div>
 </div>

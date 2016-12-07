@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+    
+    <script>
+      angular.module('app', [
+        'ngStorage'
+      ]).
+      
+      controller('Ctrl', article);
+      article.$inject= ['$scope','$localStorage'];
+      function article ($scope,$localStorage){  
+        $scope.assignment = [];  
+
+        $scope.storage = $localStorage;
+        console.log($localStorage);
+        $scope.saveSection = saveSection();
+
+      }
+
+      
+
+    </script>
+  </head>
+
+  <body ng-controller="Ctrl">
+    <br/><br/>
+    <textarea ng-model="assignment.title" ng-change="storage.assignment.title = assignment.title"></textarea>
+    <textarea ng-model="assignment.content" ng-change="storage.assignment.content = assignment.content"></textarea>
+    <p>{{assignment.content}}</p>
+    <button ng-click="storage.x = storage.x + 1">{{storage.x}}</button>
+  </body>
+
+</html>
