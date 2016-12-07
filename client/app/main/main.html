@@ -114,8 +114,8 @@
     </div>
     <div class="row">
     	<h3>{{vm.title}}</h3>
-    	<input type="text" class="form-control" placeholder="Text input" ng-model="vm.assignment.title" ng-change="vm.saveAssignment()">
-    	<textarea class="form-control" rows="3" ng-model="assignment.content" ng-change="storage.assignment.content = assignment.content"></textarea>
+    	<input type="text" class="form-control" placeholder="Text input" ng-model="vm.assignment.title" ng-change="vm.storage.assignment.title = vm.assignment.title">
+    	<textarea class="form-control" rows="3" ng-model="vm.assignment.content" ng-change="vm.storage.assignment.content = vm.assignment.content"></textarea>
     	<p>{{assignment.content}}</p>
     </div>
 </div>
