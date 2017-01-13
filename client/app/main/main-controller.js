@@ -13,11 +13,10 @@
 		vm.assignment = [];
 		vm.saveAssignment = saveAssignment;
 		vm.storage = $localStorage;
-		console.log(vm.storage);
-		init()
+		init();
 
 		function init() {
-			// getAllArticles();
+			getAllArticles();
 			// testingApi();
 		}
 
@@ -29,8 +28,8 @@
 		function getAllArticles() {
 			api.getArticles()
 			.then(function(res) {
-				vm.articles= res.articles;
-				//console.log(vm.articles)
+				vm.articles= res.data;
+				console.log(vm.articles)
 			})
 			.catch(function() {
 				console.warn("Error in get all articles.")

@@ -5,32 +5,33 @@
 		.module('resolveApp')
 		.controller('ArticleCtrl', article)
 
-	article.$inject= ['$scope', '$http','localStorageService']
-	function article($scope, $http,localStorageService){
+	article.$inject= ['$scope', 'Api', '$http','$localStorage','$stateParams']
+	function article($scope, api, $http,$localStorage,$stateParams){
 		var vm= this;
-		vm.articles = [];
-		vm.title = "Article Template"
+		vm.article = [];
+		vm.title = "Article Template";
+		vm.id = $stateParams.id;
 		vm.saveArticle = saveArticle;
-		// init()
+		init()
 
-		// function init() {
-		// 	getAllArticles()
-		// }
+		function init() {
+			getSingleArticle(vm.id);
+		}
 
-		// function getAllArticles() {
-		// 	api.getArticles()
-		// 	.then(function(res) {
-		// 		vm.articles= res.docs
-		// 		console.log(vm.articles)
-		// 	})
-		// 	.catch(function() {
-		// 		console.warn("Error in get all articles.")
-		// 	})
-		// }
+		function getSingleArticle(id) {
+			api.getSingleArticle(id)
+			.then(function(res) {
+				//console.log(res);
+				vm.article= res.data
+				console.log(vm.article)
+			})
+			.catch(function() {
+				console.warn("Error in get all articles.")
+			})
+		}
 
 		function saveArticle(){
 			localStorageService.set('editingArticle', vm.article);
-			//console.log(vm.article);
 		}
 
 		function goToHome(){

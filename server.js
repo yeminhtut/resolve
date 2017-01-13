@@ -3,8 +3,8 @@ var static  = require('express-static');
 
 var app = express();
 
-app.use('/', express.static(__dirname + '/build'));
-app.use('/assets', express.static(__dirname + '/build/assets'));
+app.use('/', express.static(__dirname + '/'));
+//app.use('/assets', express.static(__dirname + '/build/assets'));
 app.use('/src', express.static(__dirname + '/build/src'));
 app.use('/vendor', express.static(__dirname + '/build/vendor'));
 app.use('/client', express.static(__dirname + '/client'));

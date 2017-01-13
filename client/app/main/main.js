@@ -7,7 +7,16 @@
           url: '/',
           templateUrl: 'client/app/main/main.html',
           controllerAs: 'vm',
-          controller: 'MainCtrl'
+          controller: 'MainCtrl',
+          data: {
+              meta: {
+                'title': 'Home page',
+                'description': 'Home page description'
+              }
+            }
         })
+    })
+    .run(function(ngMeta) {
+        ngMeta.init();
     });
 })()

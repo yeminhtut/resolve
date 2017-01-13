@@ -1,12 +1,14 @@
 <html ng-app="resolveApp">
 <head>
-    <title>Resolve</title>
+    <title ng-cloak>{{ngMeta.title}}</title>
+    <meta name="description" ng-cloak content="{{ngMeta.description}}"/>
     <base href="/">
     <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="bower_components/medium-editor/dist/css/medium-editor.css" />
     <link rel="stylesheet" href="bower_components/medium-editor/dist/css/themes/default.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
 
@@ -29,7 +31,9 @@
     <script src="bower_components/angular-medium-editor/dist/angular-medium-editor.js"></script>
     <script src="bower_components/localforage/dist/localforage.js"></script>
     <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/ngMeta/dist/ngMeta.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-sanitize.js"></script>
     <script type="text/javascript" src="/client/app/app.js"></script>
     <script type="text/javascript" src="/client/app/main/main.js"></script>
     <script type="text/javascript" src="/client/app/main/main-controller.js"></script>
